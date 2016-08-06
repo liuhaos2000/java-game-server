@@ -26,12 +26,13 @@ public interface MessageBuffer<T> {
 	/**
 	 * @return Returns true if something can be read from this buffer, else
 	 *         false.
+	 *    缓冲区是否有可读的数据
 	 */
 	boolean isReadable();
 
 	/**
 	 * Gets the number of readable bytes left in the buffer.
-	 * 
+	 * 获得缓冲区中字节数
 	 * @return an integer containing the remaining readable bytes.
 	 */
 	int readableBytes();
@@ -40,7 +41,7 @@ public interface MessageBuffer<T> {
 	 * Read a single signed byte from the current {@code readerIndex} position
 	 * of the buffer. It will increment the readerIndex after doing this
 	 * operation.
-	 * 
+	 * 读一个当前Index的字节？？？
 	 * @return Returns the byte that is read
 	 * @throws IndexOutOfBoundsException
 	 *             if isReadable() returns false.
