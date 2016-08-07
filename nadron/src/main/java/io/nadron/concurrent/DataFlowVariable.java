@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit;
  * href="http://gpars.codehaus.org/">GPars</a> dataflow variable. This class
  * will block the getVal call using a simple count down latch, also it does not
  * really prevent resetting the value using bind.
- * 
+ * CountDownLatch计数器=0，才会执行后续操作
  * @author Abraham Menacherry
  * 
  */

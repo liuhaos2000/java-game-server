@@ -13,7 +13,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * A session choosing a Lane can be done based on a strategy. The enumeration
  * already has 2 default implementations. Users can implement their own
  * sophisticated ones based on use case.
- * 
+ * Session 可以选择的两个基本策略
  * @author Abraham Menacherry
  * 
  * @param <LANE_ID_TYPE>
@@ -82,6 +82,7 @@ public interface LaneStrategy<LANE_ID_TYPE, UNDERLYING_LANE, GROUP>
 							int numOfSessions = counter.get();
 							// if numOfSessions is 0, then this lane/thread/core
 							// is not tagged to a gameroom and it can be used.
+							// 如果是０，那么这个线程池没有制定给ＲＯＯＭ，可用
 							if (numOfSessions == 0)
 							{
 								lane = theLane;
@@ -111,6 +112,7 @@ public interface LaneStrategy<LANE_ID_TYPE, UNDERLYING_LANE, GROUP>
 				}
 				// A new session has chosen the lane, hence the session counter
 				// needs to be incremented.
+				// 一个新的ｓｅｓｓｉｏｎ选择了车道．
 				laneSessionCounter.get(lane).incrementAndGet();
 				// TODO how to reduce count on session close?
 				return lane;

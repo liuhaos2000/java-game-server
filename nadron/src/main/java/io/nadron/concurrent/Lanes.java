@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 public enum Lanes
 {
 	LANES;
+	//CUP ºËÊýÁ¿£¿£¿
 	final String serverCores = System.getProperty("jet.lanes");
 	final int numOfCores;
 	final Lane<String, ExecutorService>[] jetLanes;

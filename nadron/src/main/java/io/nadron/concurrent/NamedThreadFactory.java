@@ -7,7 +7,9 @@ public class NamedThreadFactory implements ThreadFactory
 {
 	private static AtomicInteger counter = new AtomicInteger(1); 
     private String        name = "Lane"; 
+    //是否是后台线程
     private boolean       daemon; 
+    //优先度
     private int           priority; 
 
     public NamedThreadFactory(String name) { 

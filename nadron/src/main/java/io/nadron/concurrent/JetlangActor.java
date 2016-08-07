@@ -4,7 +4,12 @@ import org.jetlang.channels.Channel;
 import org.jetlang.channels.MemoryChannel;
 import org.jetlang.core.Callback;
 import org.jetlang.fibers.Fiber;
-
+/**
+ * √ª”√µΩ£ø
+ * @author liuhao
+ *
+ * @param <T>
+ */
 public class JetlangActor<T>
 {
 	private final Channel<T> inChannel;

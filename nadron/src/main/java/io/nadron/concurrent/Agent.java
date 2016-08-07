@@ -9,7 +9,7 @@ import org.jetlang.fibers.Fiber;
  * This class is used by the AppManaged aspect to transform a normal method call
  * into an asynchronous one. This class thus behaves like a Clojure or GPars
  * Agent.
- * 
+ * √ª”√µΩ£ø
  * @author Abraham Menacherry
  * 
  */
